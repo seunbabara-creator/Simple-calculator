@@ -1,0 +1,125 @@
+<!--div variant-->
+<html>
+    <head>
+        <title>Simple Calculator</title>
+        <style>
+            body{
+                background-color: aqua;
+            }
+            #subdiv{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                margin: auto;
+                grid-gap: 0;
+                align-content: center;
+                align-items: center;
+                
+            }
+            #display{
+                background-color: black;
+                color: white;   
+            }
+            #one{
+                width: 20%;
+                background-color: grey;
+                padding: 15px;
+                color: white;
+                margin: 0;
+            }
+            #two{
+                margin: 0;
+                width: 20%;
+                background-color: grey;
+                padding: 15px;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="containerdiv">
+          <div><input type="text" id="display" disabled></div> 
+          <div id="subdiv">
+          <div><input type="button" align="center" id="one" value="1" onclick="document.getElementById('display').value +='1'"></div>
+          <div><input type="button"  id="two" value="2" onclick="document.getElementById('display').value +='2'"></div>
+          <div><input type="button" id="three" value="3" onclick="document.getElementById('display').value +='3'"></div>
+          <div><input type="button" id="plus" value="+" onclick="document.getElementById('display').value +='+'"></div>
+          <div><input type="button" id="four" value="4" onclick="document.getElementById('display').value +='4'"></div>
+          <div><input type="button"  id="five" value="5" onclick="document.getElementById('display').value +='5'"></div>
+          <div><input type="button" id="six"   value="6" onclick="document.getElementById('display').value +='6'"></div>
+          <div><input type="button"  id="minus"value="-" onclick="document.getElementById('display').value +='-'"></div>
+          <div><input type="button"  id="seven"value="7" onclick="document.getElementById('display').value +='7'"></div>
+          <div><input type="button"  id="eight" value="8" onclick="document.getElementById('display').value +='8'"></div>
+          <div><input type="button"  id="nine" value="9" onclick="document.getElementById('display').value +='9'"></div>
+          <div><input type="button"  id="multiply"value="x" onclick="document.getElementById('display').value +='*'"></div>
+          <div><input type="button"  id="clear" value="AC" onclick="document.getElementById('display').value =''"></div>
+          <div><input type="button"  id="zero" value="0" onclick="document.getElementById('display').value +='0'"></div>
+          <div><input type="button"  id="equals" value="=" onclick="document.getElementById('display').value =eval(document.getElementById('display').value)"></div>
+          <div><input type="button" id="division" value="/" onclick="document.getElementById('display').value +='/'"></div> 
+          </div>   
+        </div>
+    </body>
+</html>
+<!--Original Variant-->
+<html>
+    <head>
+        <title> Simple Calculator</title> 
+        <style>
+            form{
+                margin: 0;
+                margin-block-end: 0;
+                display: grid;
+            }
+            table{
+               margin: 0;
+               row-gap: 0;
+               column-gap: 0;
+               display: inline-grid;
+               border-spacing: 0;
+            }
+            #display{
+                margin: 0;
+                width: 100%;
+            }
+            #one{
+                float: left;
+            }
+            #two{
+                float: left;
+            }
+        </style>           
+    </head>
+    <body>
+        <form name="calculator">
+            <table>
+                <tr>
+                    <td><input type="text" name="display" id="display" disabled align="right"></td>
+                </tr>
+                <tr>
+                    <td><input type="button"name="one" id="one" value="1" onclick="calculator.display.value +='1'"></td>
+                    <td><input type="button"name="two"  id="two"value="2" onclick="calculator.display.value +='2'"></td>
+                    <td><input type="button"name="three" value="3" onclick="calculator.display.value +='3'"></td>
+                    <td><input type="button"name="plus" value="+" onclick="calculator.display.value +='+'"></td>     
+                </tr>
+                <tr>
+                    <td><input type="button"name="four" value="4" onclick="calculator.display.value +='4'"></td>
+                    <td><input type="button"name="five" value="5" onclick="calculator.display.value +='5'"></td>
+                    <td><input type="button"name="six" value="6" onclick="calculator.display.value +='6'"></td>
+                    <td><input type="button"name="minus" value="-" onclick="calculator.display.value +='-'"></td>   
+                </tr>
+                <tr>
+                    <td><input type="button"name="seven" value="7" onclick="calculator.display.value +='7'"></td>
+                    <td><input type="button"name="eight" value="8" onclick="calculator.display.value +='8'"></td>
+                    <td><input type="button"name="nine" value="9" onclick="calculator.display.value +='9'"></td>
+                    <td><input type="button"name="multiply" value="x" onclick="calculator.display.value +='*'"></td>    
+                </tr>
+                <tr>
+                    <td><input type="button"name="clear" value="AC" onclick="calculator.display.value=''"></td>
+                    <td><input type="button"name="zero" value="0" onclick="calculator.display.value +='0'"></td>
+                    <td><input type="button"name="equals" value="=" onclick="calculator.display.value =eval(calculator.display.value)"></td>
+                    <td><input type="button"name="divide" value="/" onclick="calculator.display.value +='/'"></td>
+                    
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
